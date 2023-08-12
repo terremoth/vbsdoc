@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>VBScript Documentation</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <nav id="navbar">
+        <header>VBScript Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Comments">Comments</a></li>
+            <li><a class="nav-link" href="#Variables">Variables</a></li>
+            <li><a class="nav-link" href="#Data_types">Data types</a></li>
+            <li><a class="nav-link" href="#Constants">Constants</a></li>
+            <li><a class="nav-link" href="#Logical_and_math_operators">Logical and math operators</a></li>
+            <li><a class="nav-link" href="#User_I/O">User I/O</a></li>
+            <li><a class="nav-link" href="#Arrays">Arrays</a></li>
+            <li><a class="nav-link" href="#Control_statements">Control statements</a></li>
+            <li><a class="nav-link" href="#Iteration statements">Iteration statements</a></li>
+            <li><a class="nav-link" href="#Subroutines">Subroutines</a></li>
+            <li><a class="nav-link" href="#Functions">Functions</a></li>
+            <li><a class="nav-link" href="#Array_functions">Array functions</a></li>
+            <li><a class="nav-link" href="#Math_functions">Math functions</a></li>
+            <li><a class="nav-link" href="#String_functions">String functions</a></li>
+            <li><a class="nav-link" href="#Date_functions">Date functions</a></li>
+            <li><a class="nav-link" href="#Classes_/_OOP">Classes / OOP</a></li>
+            <li><a class="nav-link" href="#Error_Handling">Error Handling</a></li>
+            <li><a class="nav-link" href="#COM/API_with_Windows">COM/API with Windows</a></li>
+            <li><a class="nav-link" href="#Regex">RegEx</a></li>
+            <li><a class="nav-link" href="#File_Handling">File Handling</a></li>
+            <li><a class="nav-link" href="#Interacting_with_CMD">Interacting with CMD</a></li>
+            <li><a class="nav-link" href="#Interacting_with_DB">Interacting with DB</a></li>
+            <li><a class="nav-link" href="#HTTP_Request">HTTP Request</a></li>
+            <li><a class="nav-link" href="#Interacting with Databases">Interacting with Databases</a></li>
+            <li><a class="nav-link" href="#Pre-defined_constants">Pre-defined constants</a></li>
+            <li><a class="nav-link" href="#HTA_-_HTML_Applications">HTA - HTML Applications</a></li>
+            <li><a class="nav-link" href="#Language_Reference">Language Reference</a></li>
+            <li><a class="nav-link" href="#Books_and_References">Books and References</a></li>
+            <li><a class="nav-link" href="#ASP_Reference">ASP Reference</a></li>
+            <li><a class="nav-link" href="#Programming_tools">Programming tools</a></li>
+            <li><a class="nav-link" href="#Language_Changelog">Language Changelog</a></li>
+        </ul>
+        <div class="hamburguer-menu-icon"></div>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>
+                    VBScript or VBS is a Microsoft interpreted script version of the Visual Basic programming language, it uses most of its grammar but has some limited resources compared, like some VB keywords doesn't work. It can be used on ASP, HTA and mainly as standalone scripts, executed by Windows Script Host (WSH) or CScript to do automated tasks on Microsoft Windows Operating Systems. It can use COM to access some Windows more advanced resources like Network, Databases, System data, Registry, Schedule, Printing, Active Directory and some other resources. VBScript came first by default on Windows 98 and it is being shipped in every Windows OS since then. However, Microsoft wants to make it a optional add-on from Windows 11 onwards. Today it is on its version 5.8 and was created by Alan Cooper. It is a more advanced and more useful language compared to Batch Script, but it is outdated since PowerShell was released as a more advanced language for Windows Admins and Hackers. You can identify a VBS file by its suffix in the end of the files names, like: <i>example.<strong>vbs</strong></i> or as an encrypted version, like: <i>example.<strong>vbe</strong></i>. The main advantages to use VBS are: <br>
+                <ul>
+                    <li>considered an easy to learn & use programming language</li>
+                    <li>can use to open programs and send keypresses including control/shift/alt keys</li>
+                    <li>can be used as a quick test automation tool</li>
+                    <li>lightweight and fast interpreted</li>
+                    <li>can easily make automation scripts for Windows OS</li>
+                    <li>updated compared to CMD</li>
+                    <li>shipped with every Windows until its 11th version</li>
+                    <li>faster to learn, easier and simpler than PowerShell</li>
+                </ul>
+                <br>
+                And the disadvantages:<br>
+                <ul>
+                    <li>outdated compared to Powershell</li>
+                    <li>does not fully support OOP</li>
+                    <li>few support from Microsoft, community an lacks of tools</li>
+                    <li>can't access Win32 API, even less .NET framework, can only COM/DCOM interfacing</li>
+                    <li>sometimes it is hard to debug what exactly is wrong</li>
+                    <li>does not receives more updates since some years ago</li>
+                </ul>
+                </p>
+                <h3>Your first "hello world"</h3>
+                <p>
+                    On Windows, create a file where you want, and put this code inside:<br>
+                    <code>MsgBox "Hello, World!"</code><br>
+                    and save the file with the name <i>hello.vbs</i>, your file should change its icon to this:
+                </p>
+                <img src="https://i.imgur.com/dPWZeZ2.png" alt="VBScript file icon">
+                <p>
+                    now you can double click the file and it should execute showing the message box! Congrats, you made your first "Hello World" in VBS.
+                </p>
+            </article>
+        </section>
+    
+        <section class="main-section" id="Comments">
+            <header>Comments</header>
+            <article>
+                <p>
+                    There are 3 ways to implement comments in VBS
+                </p>
+                <p>By single quote:
+                    <code>' this is a single line comment
+                    </code>
+                </p>
+                <p>By using the <i>REM</i> keyword:
+                    <code>REM this is a single line comment</code>
+                </p>
+            </article>
+        </section>
+    
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <article>
+                <p>
+                    You can create empty variables using the <i>DIM</i> keyword:
+                </p>
+                <code>Dim var1
+                    Dim var2, var3 ' You can add multiple var declarations separated by comma
+                </code>
+                <p>
+                    or you can define it directly <u>without</u> using the <i>DIM</i> keyword:
+                </p>
+                <code>name = "John"
+                    age = 19
+                </code>
+            </article>
+        </section>
+    
+        <section class="main-section" id="Data_types">
+            <header>Data types</header>
+            <article>
+                <p>
+                    VBScript has only one data type called "Variant" with many subtypes, let's see:
+                </p>
+                <table class="definition-table">
+                    <thead>
+                        <tr>
+                            <th>SubType | VarType()</th>
+                            <th>Represented by Const</th>
+                            <th>Const Value</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Empty</td>
+                        <td>vbEmpty</td>
+                        <td>0</td>
+                        <td>Empty, uninitialized</td>
+                    </tr>
+                    <tr>
+                        <td>Null</td>
+                        <td>vbNull</td>
+                        <td>1</td>
+                        <td>Null, no valid data</td>
+                    </tr>
+                    <tr>
+                        <td>Integer</td>
+                        <td>vbInteger</td>
+                        <td>2</td>
+                        <td>integer in the range -32,768 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>Long</td>
+                        <td>vb</td>
+                        <td>3</td>
+                        <td>Long Integer in the range -2,147,483,648 to 2,147,483,647</td>
+                    </tr>
+                    <tr>
+                        <td>Single</td>
+                        <td>vbSingle</td>
+                        <td>4</td>
+                        <td>Single-precision, floating-point number in the range -3.402823E38 to -1.401298E-45 for negative values; 1.401298E-45 to 3.402823E38 for positive values</td>
+                    </tr>
+                    <tr>
+                        <td>Double</td>
+                        <td>vbDouble</td>
+                        <td>5</td>
+                        <td>Double-precision, floating-point number in the range -1.79769313486232E308 to -4.94065645841247E-324 for negative values; 4.94065645841247E-324 to 1.79769313486232E308 for positive values</td>
+                    </tr>
+                    <tr>
+                        <td>Currency</td>
+                        <td>vbCurrency</td>
+                        <td>6</td>
+                        <td>-922,337,203,685,477.5808 to 922,337,203,685,477.5807</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td>vbDate</td>
+                        <td>7</td>
+                        <td>Number that represents a date between January 1, 100 to December 31, 9999</td>
+                    </tr>
+                    <tr>
+                        <td>String</td>
+                        <td>vbString</td>
+                        <td>8</td>
+                        <td>String that can be up to approximately 2 billion characters in length</td>
+                    </tr>
+                    <tr>
+                        <td>Object</td>
+                        <td>vbObject</td>
+                        <td>9</td>
+                        <td>Automation object</td>
+                    </tr>
+                    <tr>
+                        <td>Error</td>
+                        <td>vbError</td>
+                        <td>10</td>
+                        <td>Contains an error number</td>
+                    </tr>
+                    <tr>
+                        <td>Boolean</td>
+                        <td>vbBoolean</td>
+                        <td>11</td>
+                        <td>Either True or False</td>
+                    </tr>
+                    <tr>
+                        <td>Variant</td>
+                        <td>vbVariant</td>
+                        <td>12</td>
+                        <td>Variant (used only with arrays of Variants)</td>
+                    </tr>
+                    <tr>
+                        <td>DataObject</td>
+                        <td>vbDataObject</td>
+                        <td>13</td>
+                        <td>A data-access object</td>
+                    </tr>
+                    <tr>
+                        <td>Decimal</td>
+                        <td>vbDecimal</td>
+                        <td>14</td>
+                        <td>Decimal Value</td>
+                    </tr>
+                    <tr>
+                        <td>Byte</td>
+                        <td>vbByte</td>
+                        <td>17</td>
+                        <td>Contains only a byte</td>
+                    </tr>
+                    <tr>
+                        <td>LongLong</td>
+                        <td>vbLongLong</td>
+                        <td>20</td>
+                        <td>LongLong integer (64 bit)</td>
+                    </tr>
+                    <tr>
+                        <td>Array</td>
+                        <td>vbArray</td>
+                        <td>8192</td>
+                        <td>Array</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        <section class="main-section" id="Constants">
+        <header>Constants</header>
+        <article>
+          <p>
+            Constants, or just consts, are a language syntax to define values assigned once, that will never vary later, for example:
+              <code>Const Pi = 3.14159265358979
+              Const MicrosoftFounder = "Bill Gates"
+              </code>
+          </p>
+        </article>
+      </section>
+        <!--   <section class="main-section">
+        <header id="header">Topic</header>
+        <article>
+          <p>
+            Description <code>Example</code>
+          </p>
+        </article>
+      </section> -->
+    
+    </main>
+    <h2>WIP - to be continued</h2>
+</body>
+</html>
