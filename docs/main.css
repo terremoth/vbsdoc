@@ -1,5 +1,6 @@
 body {
     font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1rem;
     display: grid;
     grid-template-areas: "nav" "content";
     gap: 0;
@@ -27,6 +28,10 @@ body {
     z-index: 2;
     width: 100%;
     border: 1px solid grey;
+}
+
+#navbar header h1 {
+    all: unset;
 }
 
 #navbar ul {
@@ -58,7 +63,7 @@ body {
 }
 
 #navbar li:hover {
-    background-color: #284a9c;
+    background-color: #1c2f6e;
     text-decoration: underline;
     text-decoration-color: #fbc318;
     text-decoration-thickness: 1px;
@@ -98,7 +103,7 @@ body {
 }
 
 .main-section header {
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
 #main-doc {
@@ -177,4 +182,24 @@ table {
     height: unset !important;
     min-height: 35px !important;
     max-width: calc(100vw - 80px) !important;
+}
+
+p,
+li,
+td {
+    font-size: 1.125rem;
+}
+
+article li {
+    margin-bottom: 0.5rem;
+}
+
+a:focus {
+    outline: 2px solid #fbc318;
+    outline-offset: 2px;
+}
+
+a:focus-visible {
+    outline: 2px solid #fbc318;
+    outline-offset: 2px;
 }

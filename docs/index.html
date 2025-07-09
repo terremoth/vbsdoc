@@ -3,54 +3,59 @@
 
 <head>
     <meta charset='utf-8'>
-    <title>VBScript Documentation</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' href='main.css'>
+    <title>Complete VBScript Reference</title>
+    <meta name="viewport" content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type='text/css' href='main.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+    <meta name="description"
+        content="Comprehensive technical VBScript documentation, covering syntax, data types, COM automation, examples and usage.">
+    <meta name="keywords"
+        content="VBScript, VBS, Microsoft scripting, Windows Script Host, WSH, scripting, automation, HTA, Visual Basic Script">
 
 </head>
 
 <body>
-    <nav id="navbar">
-        <header>VBScript Documentation</header>
+    <nav id="navbar" aria-label="Table of contents">
+        <header>
+            <h1>VBScript Documentation</h1>
+        </header>
         <ul>
             <li><a class="nav-link" href="#Introduction">Introduction</a></li>
             <li><a class="nav-link" href="#Comments">Comments</a></li>
             <li><a class="nav-link" href="#Variables">Variables</a></li>
-            <li><a class="nav-link" href="#Data_types">Data types</a></li>
+            <li><a class="nav-link" href="#Data-types">Data types</a></li>
             <li><a class="nav-link" href="#Constants">Constants</a></li>
-            <li><a class="nav-link" href="#Logical_and_math_operators">Logical and math operators</a></li>
-            <li><a class="nav-link" href="#User_I/O">User I/O</a></li>
+            <li><a class="nav-link" href="#Logical-and-math-operators">Logical and math operators</a></li>
+            <li><a class="nav-link" href="#User-IO">User I/O</a></li>
             <li><a class="nav-link" href="#Arrays">Arrays</a></li>
-            <li><a class="nav-link" href="#Control_statements">Control statements</a></li>
-            <li><a class="nav-link" href="#Iteration statements">Iteration statements</a></li>
+            <li><a class="nav-link" href="#Control-statements">Control statements</a></li>
+            <li><a class="nav-link" href="#Iteration-statements">Iteration statements</a></li>
             <li><a class="nav-link" href="#Subroutines">Subroutines</a></li>
             <li><a class="nav-link" href="#Functions">Functions</a></li>
-            <li><a class="nav-link" href="#Array_functions">Array functions</a></li>
-            <li><a class="nav-link" href="#Math_functions">Math functions</a></li>
-            <li><a class="nav-link" href="#String_functions">String functions</a></li>
-            <li><a class="nav-link" href="#Date_functions">Date functions</a></li>
-            <li><a class="nav-link" href="#Classes_/_OOP">Classes / OOP</a></li>
-            <li><a class="nav-link" href="#Error_Handling">Error Handling</a></li>
-            <li><a class="nav-link" href="#COM/API_with_Windows">COM/API with Windows</a></li>
+            <li><a class="nav-link" href="#Array-functions">Array functions</a></li>
+            <li><a class="nav-link" href="#Math-functions">Math functions</a></li>
+            <li><a class="nav-link" href="#String-functions">String functions</a></li>
+            <li><a class="nav-link" href="#Date-functions">Date functions</a></li>
+            <li><a class="nav-link" href="#Classes-OOP">Classes / OOP</a></li>
+            <li><a class="nav-link" href="#Error-Handling">Error Handling</a></li>
+            <li><a class="nav-link" href="#COM-API-with-Windows">COM/API with Windows</a></li>
             <li><a class="nav-link" href="#Regex">RegEx</a></li>
-            <li><a class="nav-link" href="#File_Handling">File Handling</a></li>
-            <li><a class="nav-link" href="#Interacting_with_CMD">Interacting with CMD</a></li>
-            <li><a class="nav-link" href="#Interacting_with_DB">Interacting with DB</a></li>
-            <li><a class="nav-link" href="#HTTP_Request">HTTP Request</a></li>
-            <li><a class="nav-link" href="#Interacting with Databases">Interacting with Databases</a></li>
-            <li><a class="nav-link" href="#Pre-defined_constants">Pre-defined constants</a></li>
-            <li><a class="nav-link" href="#HTA_-_HTML_Applications">HTA - HTML Applications</a></li>
-            <li><a class="nav-link" href="#Language_Reference">Language Reference</a></li>
-            <li><a class="nav-link" href="#Books_and_References">Books and References</a></li>
-            <li><a class="nav-link" href="#ASP_Reference">ASP Reference</a></li>
-            <li><a class="nav-link" href="#Programming_tools">Programming tools</a></li>
-            <li><a class="nav-link" href="#Language_Changelog">Language Changelog</a></li>
+            <li><a class="nav-link" href="#File-Handling">File Handling</a></li>
+            <li><a class="nav-link" href="#Interacting-with-CMD">Interacting with CMD</a></li>
+            <li><a class="nav-link" href="#HTTP-Request">HTTP Request</a></li>
+            <li><a class="nav-link" href="#Interacting-with-Databases">Interacting with Databases</a></li>
+            <li><a class="nav-link" href="#Pre-defined-constants">Pre-defined constants</a></li>
+            <li><a class="nav-link" href="#HTA-HTML-Applications">HTA - HTML Applications</a></li>
+            <li><a class="nav-link" href="#Language-Reference">Language Reference</a></li>
+            <li><a class="nav-link" href="#Books-and-References">Books and References</a></li>
+            <li><a class="nav-link" href="#ASP-Reference">ASP Reference</a></li>
+            <li><a class="nav-link" href="#Programming-tools">Programming tools</a></li>
+            <li><a class="nav-link" href="#Language-Changelog">Language Changelog</a></li>
         </ul>
         <div class="hamburguer-menu-icon"></div>
     </nav>
-    <main id="main-doc">
+    <main id="main-doc" role="main">
         <section class="main-section" id="Introduction">
             <header>Introduction</header>
             <article>
@@ -66,8 +71,8 @@
                     Cooper. It is a more advanced and more useful language compared to Batch Script, but it is outdated
                     since PowerShell was released as a more advanced language for Windows Admins and Hackers. You can
                     identify a VBS file by its suffix in the end of the files names, like:
-                    <i>example.<strong>vbs</strong></i> or as an encrypted version, like:
-                    <i>example.<strong>vbe</strong></i> that is created by <i>screnc.exe</i> (Windows Script Encoder),
+                    <em>example.<strong>vbs</strong></em> or as an encrypted version, like:
+                    <em>example.<strong>vbe</strong></em> that is created by <em>screnc.exe</em> (Windows Script Encoder),
                     an old utility
                     present in older Windows versions.
                 </p>
@@ -95,10 +100,12 @@
                 <h3>Your first "hello world"</h3>
                 <p>
                     On Windows, create a file where you want, and put this code inside:<br>
-                    <code class="language-vbscript">MsgBox "Hello, World!"</code><br>
-                    and save the file with the name <i>hello.vbs</i>, your file should change its icon to this:
                 </p>
-                <img src="https://i.imgur.com/dPWZeZ2.png" alt="VBScript file icon">
+                <code class="language-vbscript">MsgBox "Hello, World!"</code>
+                <p>
+                    and save the file with the name <em>hello.vbs</em>, your file should change its icon to this:
+                </p>
+                <img src="https://i.imgur.com/dPWZeZ2.png" alt="VBScript file icon used by .vbs files on Windows">
                 <p>
                     now you can double click the file and it should execute showing the message box! Congrats, you made
                     your first "Hello World" in VBS.
@@ -145,7 +152,7 @@
                     <code class="language-vbscript">' this is a single line comment
                     </code>
                 </p>
-                <p>By using the <i>REM</i> keyword:
+                <p>By using the <em>REM</em> keyword:
                     <code class="language-vbscript">
                         REM this is a single line comment
                     </code>
@@ -157,14 +164,14 @@
             <header>Variables</header>
             <article>
                 <p>
-                    You can create empty variables using the <i>DIM</i> keyword:
+                    You can create empty variables using the <em>DIM</em> keyword:
                 </p>
                 <code class="language-vbscript">
                     Dim var1
                     Dim var2, var3 ' You can add multiple var declarations separated by comma
                 </code>
                 <p>
-                    or you can define it directly <u>without</u> using the <i>DIM</i> keyword:
+                    or you can define it directly <u>without</u> using the <em>DIM</em> keyword:
                 </p>
                 <code class="language-vbscript">
                     name = "John"
